@@ -10,7 +10,7 @@ source:
   sha256: 11af5dc5ac7a01d98145e894f5962711b16b23cbcf6998bef9c77f00a565c9d1
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -25,16 +25,16 @@ requirements:
     - cmake
     - curl
     - git
-    - unzip  # [unix]
-    - tar  # [unix]
-    - m2-p7zip  # [win]
+    - unzip   # [unix]
+    - tar     # [unix]
+    - 7zip    # [win]
 
 test:
   commands:
-    - vcpkg --help || true  # [unix]
-    - vcpkg.exe --help & exit 0  # [win]
+    - vcpkg --help || true             # [unix]
+    - vcpkg.exe --help & exit 0        # [win]
     - vcpkg.exe install nlohmann-json  # [win]
-    - vcpkg install nlohmann-json  # [unix]
+    - vcpkg install nlohmann-json      # [unix]
 
 about:
   home: https://github.com/microsoft/vcpkg
