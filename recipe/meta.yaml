@@ -25,9 +25,9 @@ requirements:
     - cmake
     - curl
     - git
-    - unzip   # [unix]
-    - tar     # [unix]
-    - 7zip    # [win]
+    - unzip  # [unix]
+    - tar    # [unix]
+    - 7zip   # [win]
 
 test:
   commands:
