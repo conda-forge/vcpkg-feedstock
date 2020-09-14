@@ -3,7 +3,7 @@ setlocal enableextensions
 
 CD toolsrc
 
-MD build
+MKDIR build
 CD build
 
 cmake .. ^
@@ -18,11 +18,11 @@ ninja
 
 if errorlevel 1 exit 1
 
-MD %LIBRARY_PREFIX%\bin\
+IF NOT EXIST %LIBRARY_PREFIX%\bin MKDIR %LIBRARY_PREFIX%\bin
 COPY vcpkg.exe %LIBRARY_PREFIX%\bin\
 if errorlevel 1 exit 1
 
-MD %LIBRARY_PREFIX%\share\vcpkg
+IF NOT EXIST %LIBRARY_PREFIX%\share\vcpkg MKDIR %LIBRARY_PREFIX%\share\vcpkg
 if errorlevel 1 exit 1
 
 MOVE %SRC_DIR%\ports %LIBRARY_PREFIX%\share\vcpkg\
