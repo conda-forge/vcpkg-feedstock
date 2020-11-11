@@ -19,8 +19,7 @@ requirements:
     - ninja
     - cmake
   run:
-    - {{ compiler('c') }}
-    - {{ compiler('cxx') }}
+    - compilers
     - ninja
     - cmake
     - curl
