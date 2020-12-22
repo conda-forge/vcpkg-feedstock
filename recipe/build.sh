@@ -12,7 +12,7 @@ cmake .. \
 	${CMAKE_ARGS}
 
 ninja
-ninja test
+# ninja test
 
 mkdir -p $PREFIX/bin/
 mv vcpkg $PREFIX/bin/
