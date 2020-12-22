@@ -5,11 +5,9 @@ Home: https://github.com/microsoft/vcpkg
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/vcpkg-feedstock/blob/master/LICENSE.txt)
 
 Summary: https://github.com/microsoft/vcpkg
-
-
 
 Current build status
 ====================

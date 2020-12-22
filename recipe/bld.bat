@@ -15,6 +15,7 @@ cmake .. ^
 if errorlevel 1 exit 1
 
 ninja
+@rem ninja test
 
 if errorlevel 1 exit 1
 

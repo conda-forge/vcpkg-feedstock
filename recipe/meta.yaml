@@ -1,26 +1,25 @@
 {% set name = "vcpkg" %}
-{% set version = "2020.07" %}
+{% set version = "2020.11" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
   url: https://github.com/microsoft/vcpkg/archive/{{ version }}.tar.gz
-  sha256: 11af5dc5ac7a01d98145e894f5962711b16b23cbcf6998bef9c77f00a565c9d1
+  sha256: 71d714bb0fa07fd9686cfaaf3730ae2089da8a5fc9edd5094996226e3ba7a462
 
 build:
-  number: 1
+  number: 0
 
 requirements:
   build:
-    - "{{ compiler('c') }}"
-    - "{{ compiler('cxx') }}"
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
     - ninja
     - cmake
   run:
-    - "{{ compiler('c') }}"
-    - "{{ compiler('cxx') }}"
+    - compilers
     - ninja
     - cmake
     - curl
@@ -34,7 +33,7 @@ test:
     - vcpkg --help || true             # [unix]
     - vcpkg.exe --help & exit 0        # [win]
     - vcpkg.exe install nlohmann-json  # [win]
-    - vcpkg install nlohmann-json      # [unix]
+    - vcpkg install nlohmann-json      # [osx]
 
 about:
   home: https://github.com/microsoft/vcpkg
