@@ -10,7 +10,7 @@ source:
   sha256: 71d714bb0fa07fd9686cfaaf3730ae2089da8a5fc9edd5094996226e3ba7a462
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -19,7 +19,6 @@ requirements:
     - ninja
     - cmake
   run:
-    - compilers
     - ninja
     - cmake
     - curl
