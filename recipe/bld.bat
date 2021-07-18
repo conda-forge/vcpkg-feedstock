@@ -1,28 +1,6 @@
 setlocal EnableDelayedExpansion
 setlocal enableextensions
 
-CD toolsrc
-
-MKDIR build
-CD build
-
-cmake .. ^
-	-G "Ninja" ^
-	-DCMAKE_BUILD_TYPE=Release ^
-	-DVCPKG_DEVELOPMENT_WARNINGS=OFF ^
-	%CMAKE_ARGS%
-
-if errorlevel 1 exit 1
-
-ninja
-@rem ninja test
-
-if errorlevel 1 exit 1
-
-IF NOT EXIST %LIBRARY_PREFIX%\bin MKDIR %LIBRARY_PREFIX%\bin
-COPY vcpkg.exe %LIBRARY_PREFIX%\bin\
-if errorlevel 1 exit 1
-
 IF NOT EXIST %LIBRARY_PREFIX%\share\vcpkg MKDIR %LIBRARY_PREFIX%\share\vcpkg
 if errorlevel 1 exit 1
 
@@ -35,6 +13,8 @@ if errorlevel 1 exit 1
 MOVE %SRC_DIR%\triplets %LIBRARY_PREFIX%\share\vcpkg\
 if errorlevel 1 exit 1
 
+MOVE %SRC_DIR%\versions %LIBRARY_PREFIX%\share\vcpkg\
+if errorlevel 1 exit 1
 
 :: Copy the [de]activate scripts to %PREFIX%\etc\conda\[de]activate.d.
 :: This will allow them to be run on environment activation.
