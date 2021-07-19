@@ -21,7 +21,7 @@ test:
     - vcpkg --help || true             # [unix]
     - vcpkg.exe --help & exit 0        # [win]
     - vcpkg.exe install nlohmann-json  # [win]
-    - vcpkg install nlohmann-json      # [osx]
+    # - vcpkg install nlohmann-json      # [osx]
 
 about:
   home: https://github.com/microsoft/vcpkg
