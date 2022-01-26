@@ -10,7 +10,7 @@ source:
   sha256: 7d9fbe552113563cbb8115936dd2bae9973c3883411e5f9a2d138f0ca2c7ae59
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   run:
@@ -21,7 +21,8 @@ test:
     - vcpkg --help || true             # [unix]
     - vcpkg.exe --help & exit 0        # [win]
     - vcpkg.exe install nlohmann-json  # [win]
-    # - vcpkg install nlohmann-json      # [osx]
+    - test -f $VCPKG_ROOT/.vcpkg-root  # [unix]
+    - if not exist %VCPKG_ROOT%\.vcpkg-root (exit 1)  # [win]
 
 about:
   home: https://github.com/microsoft/vcpkg
