@@ -16,6 +16,9 @@ if errorlevel 1 exit 1
 MOVE %SRC_DIR%\versions %LIBRARY_PREFIX%\share\vcpkg\
 if errorlevel 1 exit 1
 
+COPY %SRC_DIR%\.vcpkg-root %LIBRARY_PREFIX%\share\vcpkg\.vcpkg-root
+if errorlevel 1 exit 1
+
 :: Copy the [de]activate scripts to %PREFIX%\etc\conda\[de]activate.d.
 :: This will allow them to be run on environment activation.
 for %%F in (activate deactivate) DO (
