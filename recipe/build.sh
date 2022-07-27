@@ -5,6 +5,7 @@ mv $SRC_DIR/scripts $PREFIX/share/vcpkg/
 mv $SRC_DIR/triplets $PREFIX/share/vcpkg/
 mv $SRC_DIR/versions $PREFIX/share/vcpkg/
 cp $SRC_DIR/.vcpkg-root $PREFIX/share/vcpkg/.vcpkg-root
+cp $SRC_DIR/LICENSE.txt $PREFIX/share/vcpkg/LICENSE.txt
 
 # Copy the [de]activate scripts to $PREFIX/etc/conda/[de]activate.d.
 # This will allow them to be run on environment activation.
