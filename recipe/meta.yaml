@@ -11,8 +11,8 @@ source:
 
 build:
   number: 2
-  script: python "${RECIPE_DIR}/build.py" # [unix]
-  script: python %RECIPE_DIR%\build.py"   # [win]
+  script: python "${RECIPE_DIR}/build.py"  # [unix]
+  script: python %RECIPE_DIR%\build.py"    # [win]
 
 requirements:
   build:
