@@ -4,16 +4,16 @@ setlocal enableextensions
 IF NOT EXIST %LIBRARY_PREFIX%\share\vcpkg MKDIR %LIBRARY_PREFIX%\share\vcpkg
 if errorlevel 1 exit 1
 
-COPY %SRC_DIR%\ports %LIBRARY_PREFIX%\share\vcpkg\
+XCOPY %SRC_DIR%\ports %LIBRARY_PREFIX%\share\vcpkg\ /E /S
 if errorlevel 1 exit 1
 
-COPY %SRC_DIR%\scripts %LIBRARY_PREFIX%\share\vcpkg\
+XCOPY %SRC_DIR%\scripts %LIBRARY_PREFIX%\share\vcpkg\ /E /S
 if errorlevel 1 exit 1
 
-COPY %SRC_DIR%\triplets %LIBRARY_PREFIX%\share\vcpkg\
+XCOPY %SRC_DIR%\triplets %LIBRARY_PREFIX%\share\vcpkg\ /E /S
 if errorlevel 1 exit 1
 
-COPY %SRC_DIR%\versions %LIBRARY_PREFIX%\share\vcpkg\
+XCOPY %SRC_DIR%\versions %LIBRARY_PREFIX%\share\vcpkg\ /E /S
 if errorlevel 1 exit 1
 
 COPY %SRC_DIR%\.vcpkg-root %LIBRARY_PREFIX%\share\vcpkg\.vcpkg-root
