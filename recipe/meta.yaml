@@ -22,8 +22,8 @@ requirements:
 
 test:
   commands:
-    - vcpkg --help || true                            # [unix]
-    - vcpkg.exe --help & exit 0                       # [win]
+    - vcpkg --version                                 # [unix]
+    - vcpkg.exe --version                             # [win]
     - vcpkg.exe install nlohmann-json                 # [win]
     - test -f "${VCPKG_ROOT}/.vcpkg-root"             # [unix]
     - if not exist %VCPKG_ROOT%\.vcpkg-root (exit 1)  # [win]
