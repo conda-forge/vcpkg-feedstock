@@ -28,7 +28,7 @@ test:
     - test -f "${VCPKG_ROOT}/.vcpkg-root"             # [unix]
     - if not exist %VCPKG_ROOT%\.vcpkg-root (exit 1)  # [win]
     - test -d "${VCPKG_ROOT}/scripts"                 # [unix]
-    - if not exist %VCPKG_ROOT%\.scripts (exit 1)     # [win]
+    - if not exist %VCPKG_ROOT%\scripts (exit 1)     # [win]
 
 about:
   home: https://github.com/microsoft/vcpkg
