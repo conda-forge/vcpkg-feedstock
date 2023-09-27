@@ -10,7 +10,7 @@ source:
   sha256: 7b5a7fd9a9019773e7a09dbc9aa167e01cc7745e819994d458af23e56e25e658
 
 build:
-  number: 2
+  number: 3
   script: python "${RECIPE_DIR}/build.py"  # [unix]
   script: python %RECIPE_DIR%\build.py"    # [win]
 
