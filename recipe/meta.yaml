@@ -1,5 +1,5 @@
 {% set name = "vcpkg" %}
-{% set version = "2023.04.15" %}
+{% set version = "2023.08.09" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/microsoft/vcpkg/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 7b5a7fd9a9019773e7a09dbc9aa167e01cc7745e819994d458af23e56e25e658
+  sha256: 241ae285fe27ce3f8478529d9a05e7a49396789fd8618ed62a11c3e4835aaab2
 
 build:
-  number: 2
+  number: 0
   script: python "${RECIPE_DIR}/build.py"  # [unix]
-  script: python %RECIPE_DIR%\build.py"    # [win]
+  script: python %RECIPE_DIR%\build.py"  # [win]
 
 requirements:
   build:
