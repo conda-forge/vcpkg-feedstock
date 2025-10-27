@@ -1,6 +1,5 @@
 channel_sources:
 - conda-forge
-- conda-forge,conda-forge/label/python_rc
 channel_targets:
 - conda-forge main
 target_platform:
